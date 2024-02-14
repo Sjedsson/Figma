@@ -1,0 +1,121 @@
+/* styles.css */
+body, h1, h2, h3, a, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Full body styling */
+body {
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+.header {
+    background-color: #D9D9D9; /* Light grey background */
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr; /* 3 columns layout */
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Hamburger icon placeholder */
+.menu-icon {
+    font-size: 1.5rem; /* Placeholder size */
+    cursor: pointer;
+}
+
+/* Title in the header */
+.header-title {
+    text-align: center;
+    font-size: 1.5rem; /* Adjust size as per your design */
+}
+
+/* Log in button */
+.login-button {
+    text-align: right;
+    font-size: 1rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #000;
+}
+
+/* Main content area */
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns grid */
+    gap: 10px; /* Adjust the gap as necessary */
+    padding: 1rem;
+}
+
+/* Grid items */
+.grid-item {
+    background-color: #f0f0f0; /* Light gray for items */
+    grid-column: span 2; /* Each item spans two columns */
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Footer styling */
+/* Footer styling */
+.footer {
+    background-color: #D9D9D9; /* Light grey background */
+    display: flex; /* Use flexbox instead of grid to place items side by side */
+    justify-content: space-between; /* Distribute space evenly between the items */
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-section {
+    
+}
+
+.footer-section h3 {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+
+@media (max-width: 400px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 1rem; 
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .header, .footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .login-button {
+        margin-top: 0.5rem;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-item {
+        grid-column: span 1;
+    }
+
+    .footer-section {
+        grid-column: span 1;
+    }
+}
