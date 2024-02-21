@@ -1,77 +1,88 @@
-/* styles.css */
-body, h1, h2, h3, a, button {
+/* Resetting default browser styles */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
-/* Full body styling */
+html, body {
+    min-height: 100%; /* Ensure at least the full height of the viewport */
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+}
+
 body {
-    background-color: #fff;
-    color: #000;
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    font-family: "ABeeZee", sans-serif;
 }
 
 /* Header styling */
 .header {
-    background-color: #D9D9D9; /* Light grey background */
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr; /* 3 columns layout */
+
+    display: flex;
+    justify-content: center;
     align-items: center;
+    background-color: #D9D9D9;
+    height: 152px;
     padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.header-logo {
+    text-decoration: none; /* Removes the underline from the link */
+    color: black; /* Set the color to black or any color your design uses */
+    /* Other styles for your logo */
 }
 
-/* Hamburger icon placeholder */
-.menu-icon {
-    font-size: 1.5rem; /* Placeholder size */
-    cursor: pointer;
-}
-
-/* Title in the header */
-.header-title {
-    text-align: center;
-    font-size: 1.5rem; /* Adjust size as per your design */
-}
-
-/* Log in button */
-.login-button {
-    text-align: right;
-    font-size: 1rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: #000;
+.header-logo h1 {
+    margin: 0; /* Adjust as needed */
+    margin-left: 90px;
+    font-size: 24px;
 }
 
 /* Main content area */
 .main-content {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 columns grid */
-    gap: 10px; /* Adjust the gap as necessary */
+    flex-grow: 1; /* Allow the main content to grow and take up available space */
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    justify-content: center; /* Center items vertically if there's space */
+    align-items: center; /* Center items horizontally */
 }
 
-/* Grid items */
-.grid-item {
-    background-color: #f0f0f0; /* Light gray for items */
-    grid-column: span 2; /* Each item spans two columns */
-    padding: 2rem;
-    text-align: center;
+.main-content > div { /* Assuming only .grid-item divs are direct children */
+    background-color: #f0f0f0;
+    height: 122px; /* Specific height for child items */
+    width: 258px; /* Specific width for child items */
+    margin-top: 30px; /* Margin-top for child items */
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center text horizontally within the child */
+    align-items: center; /* Center text vertically within the child */
+    text-align: center; /* Center text if it wraps to more than one line */
 }
 
-/* Footer styling */
+
 /* Footer styling */
 .footer {
-    background-color: #D9D9D9; /* Light grey background */
-    display: flex; /* Use flexbox instead of grid to place items side by side */
-    justify-content: space-between; /* Distribute space evenly between the items */
+    background-color: #D9D9D9;
+    height: 152px; /* Fixed footer height */
+    display: flex;
+    justify-content: space-between;
     padding: 1rem;
-    text-align: center;
+    font-size: 15px;
 }
 
 .footer-section {
-    
+    /* Flexbox allows even spacing and vertical center alignment */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* This will make sure each section takes equal space */
 }
 
 .footer-section h3 {
@@ -79,43 +90,60 @@ body {
 }
 
 .footer-section a {
-    display: block;
-    margin: 0.5rem 0;
+    text-align: left;
+    color: #000;
+    text-decoration: none;
+}
+.sidebar a {
+    display: flex;
+    color: #000;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 2px 2px ;
+    font-size: 20px;
+}
+button {
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
 }
 
-
-@media (max-width: 400px) {
-    .footer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-section {
-        margin-bottom: 1rem; 
-    }
+.main-nav button {
+    position: absolute; /* Absolute positioning relative to header */
+    right: 1rem; /* 1rem from the right edge of the header */
+    bottom: 1rem; /* 1rem from the bottom edge of the header */
+    background: transparent; /* No background for the button */
+    border: none; /* No border for the button */
+    color: #000; /* Text color for the button */
+    padding: 2px; /* Padding around the text */
+    cursor: pointer;
+    font-size: 20px;
+    /* other styles you may want for the button */
+}
+h2 {
+    font-style: normal;
+    font-size: 15px;
 }
 
-
-
-@media (max-width: 768px) {
-    .header, .footer {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .login-button {
-        margin-top: 0.5rem;
-    }
-
+/* iPhone 14 Pro Max and smaller devices */
+@media (max-width: 430px) {
+    /* Adjust the main content grid to a single column layout */
     .main-content {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
 
     .grid-item {
-        grid-column: span 1;
+        /* Full width for small screens */
+        width: 100%;
+        margin-bottom: 10px; /* Keep space between items */
     }
 
-    .footer-section {
-        grid-column: span 1;
+    /* Ensure footer is at the bottom */
+    .footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
 }
