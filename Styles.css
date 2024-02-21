@@ -119,12 +119,31 @@ h2 {
     font-style: normal;
     font-size: 15px;
 }
+.product-image {
+    max-width: 100%; /* Set the maximum width to fit the viewport */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper block rendering */
+    margin: 0 auto; /* Center the image */
+}
+
+    .booking {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+         /* Add margin between elements */
+    }
+
+    .booking button {
+        background-color: green; /* Set button background color to green */
+        color: white; /* Set button text color to white */
+    }
 
 @media (max-width: 430px) {
     .main-content {
         display: flex;
         flex-direction: column;
     }
+    
 
     .grid-item {
         width: 100%;
