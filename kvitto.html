@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./Component/component.css">
 </head>
 <body>
     <header class="header">
-        <!-- Wrap the h1 tag with an a tag linking to index.html -->
         <a href="index.html" class="header-logo">
             <h1>Stickans Uthyrning</h1>
         </a>
@@ -19,20 +19,29 @@
             <button>Log in</button>
         </nav>
     </header>
-    
+    <div class="sidebar">
+        <a href="oversikt.html">Översikt</a>
+        <a href="kvitto.html">Kvitto</a>
+    </div> 
     <div class="container">
-        <aside class="sidebar">
 
-            <a href="#">Översikt</a>
-            <a href="#">Kvitto</a>
-        </aside>
-    <!-- Header same as in previous examples -->
 
-    <main class="main-content">
+    <main class="kvitto">
         <h2>Kvitto</h2>
-        <!-- Content for the checkout or receipt -->
     </main>
-
+    <div class="korg">
+        <h1>Din Varo korg</h1>
+        <h3>1x Skruvmejsel</h3>
+        <div>
+            <label for="from">Från: </label>
+            <span class="date-bg">1/3/24</span>
+        </div>
+        <div class="date-containerr">
+            <label for="to">Till:</label>
+            <span class="date-bg">1/4/24</span>
+        </div>
+        <h2 class="tack">`Tack För att du hyr från oss!`</h2>
+    </div>
     <footer class="footer">
         <div class="footer-section">
             <h2>Kontakt</h2>

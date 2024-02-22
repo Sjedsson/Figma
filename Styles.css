@@ -5,13 +5,20 @@
 }
 
 html, body {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+    width: 430px;
+    height: 932px;
+    display: grid;
+    grid-template-columns: 50px 100px;
+    grid-template-rows: repeat(15, 50px) 1fr;
+    gap: 0;
+    grid-column: span 6;
     font-family: "ABeeZee", sans-serif;
 }
 
+
 .header {
+    grid-row: 1 / span 3;
+    grid-column: 1 / span 6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +39,7 @@ html, body {
 }
 
 .main-content {
+    grid-column: 3 / span 5;
     flex-grow: 1;
     padding: 1rem;
     display: flex;
@@ -44,14 +52,14 @@ html, body {
 .main-content a {
     text-decoration: none;
     display: inline-block;
-    width: 258px;
+    width: 250px;
     height: 122px;
     padding: 20px;
     margin: 20px;
     background-color: #d9d9d9;
     color: #000000;
     border-radius: 5%;
-    font-size: 24px;
+    font-size: 25px;
     line-height: 75px;
     text-align: center;
     transition: background-color 0.3s;
@@ -60,6 +68,22 @@ html, body {
 .main-content a:hover {
     background-color: #eeeeee;
 }
+
+.screw-text {
+    font-size: 24px;
+}
+
+.container {
+    display: grid;
+    grid-row: 5;
+    grid-column: 2;
+}
+.container-screw {
+    display: grid;
+    grid-row: 6;
+    grid-column: 2;
+}
+
 
 .footer {
     background-color: #D9D9D9;
@@ -88,14 +112,7 @@ html, body {
     text-decoration: none;
 }
 
-.sidebar a {
-    display: flex;
-    color: #000;
-    flex-direction: column;
-    text-decoration: none;
-    margin: 2px 2px ;
-    font-size: 20px;
-}
+
 
 button {
     display: flex;
@@ -120,24 +137,147 @@ h2 {
     font-size: 15px;
 }
 .product-image {
-    max-width: 100%; /* Set the maximum width to fit the viewport */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure proper block rendering */
-    margin: 0 auto; /* Center the image */
+    height: 250px;
+    display: block; 
+    margin: 0 auto; 
 }
 
-    .booking {
-        display: flex;
-        flex-direction: column;
-        text-align: start;
-         /* Add margin between elements */
-    }
 
-    .booking button {
-        background-color: green; /* Set button background color to green */
-        color: white; /* Set button text color to white */
-    }
+.test{
+    margin-left: 9px;
+}
 
+
+
+.booking button:hover {
+    background-color: #d9d9d9;
+}
+.sidebar {
+    height: auto;
+}
+
+.slut {
+    font-size: 24px;
+    color:#FF0000;
+}
+.lager {
+    font-size: 24px;
+}
+
+.booking.lagerstatusbox {
+    width: 267px;
+    height: 131px;
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.oversikt {
+    margin-left: 40px;
+    display: flex;
+    background-color: #d9d9d9;
+    width: 261px;
+    height: 68px;
+    justify-content: center;
+    align-items: center;
+}
+.nuvarande {
+    display: flex;
+    margin-left: 40px;
+    background-color: #d9d9d9;
+    margin-top: 30px;
+    width: 261px;
+    height: 118px;
+    padding-left: 10px;
+    padding-top: 10px;
+
+}
+
+.tidigare {
+    display: flex;
+    background-color: #D9D9D9;
+    margin-top: 30px;
+    width: 261px;
+    height: 182px;
+    justify-content: center;
+    flex-direction: column;
+    margin: 40px;
+    gap: 10px;
+    padding-left: 10px;
+}
+.kvitto {
+    background-color: #D9D9D9;
+    margin-left: 40px;
+    display: flex;
+    background-color: #d9d9d9;
+    width: 261px;
+    height: 68px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.korg {
+    background-color: #D9D9D9;
+    display: flex;
+    background-color: #D9D9D9;
+    margin-top: 30px;
+    width: 261px;
+    height: 323px;
+    justify-content: center;
+    flex-direction: column;
+    margin: 40px;
+    gap: 30px;
+    padding-left: 10px;
+}
+
+.tack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "ABeeZee", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    color: #0D9F00;
+}
+
+.date-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.date-containerr label {
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.date-bg {
+    background-color: white;
+    padding: 2px 20px;
+    border-radius: 4px;
+    margin-right: 4px;
+    flex-shrink: 0;
+}
+
+.booking .boka {
+    display: block;
+    width: fit-content;
+    margin: 20px auto; 
+    padding: 10px 20px;
+    color: #0D9F00;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+  }
+
+
+  
 @media (max-width: 430px) {
     .main-content {
         display: flex;

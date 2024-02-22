@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hammare - Stickans Uthyrning</title>
+    <title>Skruvmejsel - Stickans Uthyrning</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./Component/component.css">
 </head>
 <body>
     <header class="header">
-        <!-- Wrap the h1 tag with an a tag linking to index.html -->
         <a href="index.html" class="header-logo">
             <h1>Stickans Uthyrning</h1>
         </a>
@@ -19,41 +19,42 @@
             <button>Log in</button>
         </nav>
     </header>
-    
-    <div class="container">
-        <aside class="sidebar">
+    <div class="sidebar">
+        <a href="oversikt.html">Översikt</a>
+        <a href="kvitto.html">Kvitto</a>
+    </div>
 
-            <a href="#">Översikt</a>
-            <a href="#">Kvitto</a>
-        </aside>
-    
+    <div class="container-screw">
 
     <main class="main-content">
-        <h2>Hammare</h2>
-        <!-- Content specific to the Hammare product -->
-    </main>
+        <h2 class="screw-text">Hammare</h2>
+        <img src="hammare.png" alt="Hammare" class="product-image">
 
+        <div class="booking lagerstatusbox">
+            <h1 class="slut">Slut i lager</h1>
+            <h1 class="lager"> Åter 1:a Mars</h1>
+        </div>
+    </main>
+    </div>
     <footer class="footer">
         <div class="footer-section">
             <h2>Kontakt</h2>
-            <a href="#">*A</a>
-            <a href="#">*B</a>
-            <a href="#">*C</a>
+            <p>*A</p>
+            <p>*B</p>
+            <p>*C</p>
         </div>
         <div class="footer-section">
             <h2>Produkter</h2>
-            <a href="#">*A</a>
-            <a href="#">*B</a>
-            <a href="#">*C</a>
+            <p>*A</p>
+            <p>*B</p>
+            <p>*C</p>
         </div>
         <div class="footer-section">
             <h2>Om Oss</h2>
-            <a href="#">*A</a>
-            <a href="#">*B</a>
-            <a href="#">*C</a>
+            <p>*A</p>
+            <p>*B</p>
+            <p>*C</p>
         </div>
     </footer>
-
-    <!-- Footer same as in previous examples -->
 </body>
 </html>

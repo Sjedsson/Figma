@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./Component/component.css">
 </head>
 <body>
     <header class="header">
-        <!-- Wrap the h1 tag with an a tag linking to index.html -->
         <a href="index.html" class="header-logo">
             <h1>Stickans Uthyrning</h1>
         </a>
@@ -19,20 +19,25 @@
             <button>Log in</button>
         </nav>
     </header>
-    
+    <div class="sidebar">
+        <a href="oversikt.html">Översikt</a>
+        <a href="kvitto.html">Kvitto</a>
+    </div> 
     <div class="container">
-        <aside class="sidebar">
 
-            <a href="#">Översikt</a>
-            <a href="#">Kvitto</a>
-        </aside>
-    <!-- Header same as in previous examples -->
 
-    <main class="main-content">
+    <main class="oversikt">
         <h2>Din Översikt</h2>
-        <!-- Content for the user's overview -->
     </main>
-
+    <div class="nuvarande">
+        <h2>Nuvarande Uthyrning:</h2>
+    </div>
+    <div class="tidigare">
+        <h2>Tidigare hyrda produkter:</h2>
+        <h2>Skruvmejsel - 1/1/2001</h2>
+        <h2>Skruvmejsel - 1/1/2002</h2>
+        <h2>Skruvmejsel - 1/1/2003</h2>
+    </div>
     <footer class="footer">
         <div class="footer-section">
             <h2>Kontakt</h2>

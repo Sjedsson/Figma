@@ -8,10 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./Component/component.css">
 </head>
 <body>
     <header class="header">
-        <!-- Wrap the h1 tag with an a tag linking to index.html -->
+
         <a href="index.html" class="header-logo">
             <h1>Stickans Uthyrning</h1>
         </a>
@@ -19,27 +20,24 @@
             <button>Log in</button>
         </nav>
     </header>
-    
-    <div class="container">
-        <aside class="sidebar">
+    <div class="sidebar">
+        <a href="oversikt.html">Översikt</a>
+        <a href="kvitto.html">Kvitto</a>
+    </div>
 
-            <a href="#">Översikt</a>
-            <a href="#">Kvitto</a>
-        </aside>
+    <div class="container-screw">
 
     <main class="main-content">
-        <h2>Skruvmejsel</h2>
+        <h2 class="screw-text">Skruvmejsel</h2>
         <img src="skruvmejsel.avif" alt="Skruvmejsel" class="product-image">
         <p>13 i lager</p>
         <div class="booking">
-            <label for="from">Från:</label>
-            <input type="date" id="from" name="from">
-            <label for="to">Till:</label>
-            <input type="date" id="to" name="to">
-            <button type="submit">Boka Nu</button>
+            <label for="from">Från:<input type="date" id="from" name="from"></label>
+            <label for="to">Till: <input class="test" type="date" id="to" name="to"></label>
+            <a href="kvitto.html" class="boka">Boka Nu</a>
         </div>
     </main>
-
+    </div>
     <footer class="footer">
         <div class="footer-section">
             <h2>Kontakt</h2>

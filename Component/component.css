@@ -1,0 +1,36 @@
+.booking {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    background-color: #d9d9d9; /* This line sets the background color */
+    padding: 20px;
+    width: 267px;
+    height: auto; /* Changed to auto to accommodate content */
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.booking button {
+    display: flex;
+    width: 100%; /* Full width of the parent container */
+    padding: 10px;
+    border: none;
+    background-color: #d9d9d9;
+    color: #0D9F00;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.sidebar a {
+    grid-row: 5;
+    grid-column: 1;
+    display: flex;
+    color: #000;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 2px 2px ;
+    font-size: 20px;
+}
